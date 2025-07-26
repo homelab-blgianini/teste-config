@@ -1,0 +1,10 @@
+apiVersion: v2
+name: meu-app-config
+description: Chart de configuração que referencia meu-chart remoto
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: helm-template
+    version: "0.0.1"                           # versão do chart remoto
+    repository: "https://homelab-blgianini.github.io/helm-templates"
