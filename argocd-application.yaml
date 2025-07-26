@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: meu-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/seu-org/config-repo'
+    targetRevision: main
+    path: .
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: meu-namespace
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
