@@ -1,20 +1,12 @@
 replicaCount: 1
 
 image:
-  repository: meu-repo/minha-imagem
-  tag: "latest"
+  repository: nginx
+  tag: latest
   pullPolicy: IfNotPresent
-
-containerPort: 80
-
-resources:
-  limits:
-    cpu: 100m
-    memory: 128Mi
-  requests:
-    cpu: 100m
-    memory: 128Mi
 
 service:
   type: ClusterIP
   port: 80
+
+containerPort: 80
