@@ -1,0 +1,12 @@
+name: Deploy usando Workflow Reutilizável
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-reusable:
+    uses: homelab-blgianini/reusable-workflows/.github/workflows/argocd-deploy.yml@main
+    with:
+      who-to-greet: "Bruno"
