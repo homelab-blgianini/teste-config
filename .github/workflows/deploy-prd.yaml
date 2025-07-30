@@ -9,4 +9,4 @@ jobs:
   call-reusable:
     uses: homelab-blgianini/reusable-workflows/.github/workflows/reusable-deploy.yaml@main
     with:
-      name: "Bruno"      
+      name: ${{ github.event.repository.name }}
