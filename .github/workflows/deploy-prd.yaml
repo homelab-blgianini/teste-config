@@ -10,3 +10,5 @@ jobs:
     uses: homelab-blgianini/reusable-workflows/.github/workflows/reusable-deploy.yaml@main
     with:
       name: "Bruno"
+    secrets:
+      token-argocd: ${{ secrets.ARGO_TOKEN }}
